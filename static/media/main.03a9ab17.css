@@ -2984,7 +2984,7 @@ body {
 }
 
 .logo-left .mainlogo:before {
-    background-image: url('logo.webp');
+    background-image: url('logo.png');
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
