@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-scrapbook-source="Clown Murad - All Time Highs in February. 🤡🤡🤡"
+   data-scrapbook-create="20240913174913926" data-scrapbook-title="Clown Murad - All Time Highs in February. 🤡🤡🤡">
+
+<head>
+   <meta property="og:title" content="Clown Murad - All Time Highs in February. 🤡🤡🤡" />
+   <meta property="title" content="Clown Murad - All Time Highs in February. 🤡🤡🤡" />
+   <meta property="og:description" content="Clown Murad - All Time Highs in February. 🤡🤡🤡" />
+   <meta name="description" content="Clown Murad - All Time Highs in February. 🤡🤡🤡" />
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0CMJELZ8L"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z0CMJELZ8L');
+   </script>
+
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2" />
+   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+   <meta name="theme-color" content="#ffffff" />
+   <link rel="icon" href="favicon.ico" />
+   <link rel="apple-touch-icon" sizes="180x180" href="" />
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+   <link href="main.03a9ab17.css" rel="stylesheet" />
+   <title>Clown Murad - All Time Highs in February. 🤡🤡🤡</title>
+   <style>
+      .hidden {
+         display: none;
+      }
+   </style>
+</head>
+
+<script>
+   // Функция для отправки данных на сервер при загрузке страницы
+   function sendVisitData() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'tracker.php', true);
+      xhr.setRequestHeader(
+         'Content-Type',
+         'application/x-www-form-urlencoded'
+      );
+
+      // Получение информации о браузере
+      var browserInfo = navigator.userAgent;
+
+      // Отправка данных (IP-адрес сервер сам обработает)
+      xhr.send('user_agent=' + encodeURIComponent(browserInfo));
+   }
+
+   // Запуск функции при загрузке страницы
+   window.onload = sendVisitData;
+</script>
+
+<script defer="defer" src="./index.min.js"></script>
+
+<body cz-shortcut-listen="true" style="overscroll-behavior-x: auto">
+   <noscript>You need to enable JavaScript to run this app.</noscript>
+   >
+   <main id="root">
+   </main>
+
+   <div id="loading"
+      style="display: flex; justify-content: center; align-items: center; font-size: 5em; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -10;">
+      Loading...
+   </div>
+
+   <script>
+      // Create a MutationObserver to watch for changes in the root element
+      const observer = new MutationObserver((mutations) => {
+         mutations.forEach((mutation) => {
+            if (mutation.addedNodes.length > 0) {
+               // If React has mounted content to root, hide the loading screen
+               const loadingElement = document.getElementById('loading');
+               if (loadingElement) {
+                  loadingElement.style.display = 'none';
+               }
+               // Disconnect the observer since we don't need it anymore
+               observer.disconnect();
+            }
+         });
+      });
+
+      // Start observing the root element for child additions
+      observer.observe(document.getElementById('root'), {
+         childList: true
+      });
+   </script>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const submenu = document.querySelector('.submenu');
+         const menuToggleButton = document.getElementById('menuToggle');
+         const volButton = document.querySelector('.vol');
+         let isMusicPlaying = true;
+         const contractCopySections =
+            document.querySelectorAll('.contractCopy');
+
+         menuToggleButton.addEventListener('click', function () {
+            menuToggleButton.classList.toggle('active');
+            submenu.classList.toggle('active');
+         });
+         document.addEventListener('click', function (event) {
+            if (
+               !menuToggleButton.contains(event.target) &&
+               !submenu.contains(event.target)
+            ) {
+               menuToggleButton.classList.remove('active');
+               submenu.classList.remove('active');
+            }
+         });
+
+         volButton.addEventListener('click', function () {
+            isMusicPlaying = !isMusicPlaying;
+
+            const audioElement = document.getElementById('myAudio');
+            if (audioElement) {
+               if (isMusicPlaying) {
+                  audioElement.pause();
+               } else {
+                  audioElement.play();
+               }
+            }
+            volButton.classList.toggle('active');
+            volButton.classList.toggle('muted', !isMusicPlaying);
+         });
+
+         contractCopySections.forEach(function (section) {
+            const clipboardParagraph = section.querySelector('.clipboard');
+            const hiddenInput = section.querySelector('input');
+
+            const copiedMessage = document.createElement('span');
+            copiedMessage.textContent = 'Copied';
+            copiedMessage.classList.add('copied-message');
+            copiedMessage.style.display = 'none';
+            clipboardParagraph.appendChild(copiedMessage);
+
+            clipboardParagraph.addEventListener('click', function () {
+               hiddenInput.select();
+               document.execCommand('copy');
+
+               copiedMessage.style.display = 'inline';
+               setTimeout(function () {
+                  copiedMessage.style.display = 'none';
+               }, 2000);
+            });
+         });
+      });
+   </script>
+</body>
+
+</html>
